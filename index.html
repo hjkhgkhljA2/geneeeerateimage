@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>تولید تصویر</title>
+</head>
+<body>
+    <h1>تولید تصویر</h1>
+    <form method="post">
+        <label for="prompt">متن مورد نظر:</label>
+        <input type="text" id="prompt" name="prompt" placeholder="مثلاً a men" required>
+        <button type="submit">تولید کن</button>
+    </form>
+
+    {% if image_url %}
+    <h2>تصویر تولید شده:</h2>
+    <img src="{{ image_url }}" alt="Generated Image" style="max-width:100%;">
+    {% endif %}
+</body>
+</html>
